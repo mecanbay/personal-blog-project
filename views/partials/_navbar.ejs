@@ -1,0 +1,29 @@
+<nav class="fh5co-nav" role="navigation">
+    <div class="container-wrap">
+        <div class="top-menu">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div id="fh5co-logo"><a href="/">Neat</a></div>
+                </div>
+                <div class="col-xs-10 text-right menu-1">
+                    <ul>
+                        <li class="<%= page_name == 'index' && 'active' %> "><a href="/">Home</a></li>
+                        <li class="<%= page_name == 'blog' && 'active' %> "><a href="/blog">Blog</a></li>
+                        <!-- <li class="has-dropdown">
+                            <a href="blog.html">Blog</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">eCommerce</a></li>
+                                <li><a href="#">Branding</a></li>
+                                <li><a href="#">API</a></li>
+                            </ul>
+                        </li> -->
+                        <li class="<%= page_name == 'about' && 'active' %> "><a href="/about">About</a></li>
+                        <li class="<%= page_name == 'contact' && 'active' %> " ><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</nav>

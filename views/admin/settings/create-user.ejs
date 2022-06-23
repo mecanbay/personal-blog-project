@@ -1,0 +1,137 @@
+<%- include("../partials/_header") %> 
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="/admin/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  <!-- Navbar -->
+  <%- include("../partials/_navbar") %> 
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <%- include("../partials/_sidebar") %> 
+  
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Create User</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              
+              <div class="card card-info">
+                <div class="card-header bg-success">
+                  <h3 class="card-title">Create User Form</h3>
+                </div>
+                <div class="card-body">
+                  <form action="/admin/settings/create-user" method="POST">
+                  <div class="col-12 d-flex justify-content-between align-items-center">
+                    <div class="input-group mb-3 mr-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Name</span>
+                      </div>
+                      <input type="text" class="form-control" name="name" placeholder="Name">
+                    </div>
+                    <div class="input-group mb-3 mr-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Surname</span>
+                      </div>
+                      <input type="text" class="form-control" name="surname" placeholder="Surname">
+                    </div>
+                    
+                  </div>
+                  <div class="col-12 d-flex justify-content-between align-items-center">
+                    <div class="input-group mb-3 mr-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                      </div>
+                      <input type="email" class="form-control" name="email" placeholder="Email">
+                    </div>
+                    <div class="input-group mb-3 mr-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">@</span>
+                      </div>
+                      <input type="text" class="form-control" name="username" placeholder="Username">
+                    </div>
+                    
+                  </div>
+                  <div class="col-12 d-flex justify-content-between align-items-center">
+                    <div class="input-group mb-3 mr-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                      </div>
+                      <input type="password" class="form-control" name="password" placeholder="Password">
+                    </div>
+                    <div class="input-group mb-3 mr-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user-lock"></i></span>
+                      </div>
+                      <select class="custom-select rounded-0" name="role_id" id="exampleSelectRounded0">
+                        <% for (let i = 0; i < roles.length; i++) {%>
+                          <option value="<%= roles[i]._id%>"><%= roles[i].name %> </option>
+                        <% } %>  
+                      </select>
+                    </div>
+                    
+                  </div>
+                  <div class="col-12 d-flex justify-content-between align-items-center">
+                   
+                    <div class="input-group">
+                      
+                      <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                        <input type="checkbox" name="status" class="custom-control-input" id="customSwitch3">
+                        <label class="custom-control-label" for="customSwitch3">User Status</label>
+                      </div>
+                      
+                  </div>
+                  
+                  
+                  
+                  
+                  
+                  
+
+                  <!-- /input-group -->
+
+                  <!-- /input-group -->
+                  </div>
+                  
+                <!-- /.card-body -->
+                <div class="col-12 d-flex justify-content-end align-items-center">
+                   <button class="btn btn-outline-success" type="submit">Create User</button>
+                </div>
+              </form>
+              </div>
+            </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <%- include("../partials/_footer") %> 
+
+</body>
+</html>

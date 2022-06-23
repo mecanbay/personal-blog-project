@@ -1,0 +1,195 @@
+<%- include("../partials/_header") %> 
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="/admin/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  <!-- Navbar -->
+  <%- include("../partials/_navbar") %> 
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <%- include("../partials/_sidebar") %> 
+  
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Create User</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              
+              <div class="card card-info">
+                <div class="card-header bg-teal">
+                  <h3 class="card-title">Create Role Form</h3>
+                </div>
+                <div class="card-body">
+                  <form action="/admin/settings/create-role" method="POST">
+                  <div class="col-12 justify-content-center align-items-center">
+                    <div class="input-group mb-3 ">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Name</span>
+                      </div>
+                      <input type="text" class="form-control" name="name" placeholder="Name">
+                    </div>
+                    
+                    
+                  </div>
+                  <div class="col-12 justify-content-center align-items-center">
+                    <div class="card card-danger">
+                      <div class="card-header">
+                      <h3 class="card-title">User Permissions</h3>
+                      </div>
+                      <div class="card-body">
+                      <div class="row">
+                      <div class="col-3">
+                        <div class="form-group">
+                          <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                          <input type="checkbox" name="create_user" value="1" class="custom-control-input" id="create-user">
+                          <label class="custom-control-label" for="create-user">Create User</label>
+                          </div>
+                          </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                          <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                          <input type="checkbox" name="read_user" value="1" class="custom-control-input" id="read-user">
+                          <label class="custom-control-label" for="read-user">Read User</label>
+                          </div>
+                          </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                          <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                          <input type="checkbox" name="update_user" value="1" class="custom-control-input" id="update-user">
+                          <label class="custom-control-label" for="update-user">Update User</label>
+                          </div>
+                          </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                          <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                          <input type="checkbox" name="delete_user" value="1" class="custom-control-input" id="delete-user">
+                          <label class="custom-control-label" for="delete-user">Delete User</label>
+                          </div>
+                          </div>
+                      </div>
+                      <small>If the User is not given read permission, the user cannot update or delete.</small>
+                      </div>
+                      </div>
+                      
+                      </div>
+                    
+                    
+                  </div>
+                  <div class="col-12 justify-content-center align-items-center">
+                    <div class="card card-danger">
+                      <div class="card-header">
+                      <h3 class="card-title">Role Permissions</h3>
+                      </div>
+                      <div class="card-body">
+                      <div class="row">
+                      <div class="col-3">
+                        <div class="form-group">
+                          <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                          <input type="checkbox" name="create_role" value="1" class="custom-control-input" id="create-role">
+                          <label class="custom-control-label" for="create-role">Create Role</label>
+                          </div>
+                          </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                          <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                          <input type="checkbox" name="read_role" value="1" class="custom-control-input" id="read-role">
+                          <label class="custom-control-label" for="read-role">Read Role</label>
+                          </div>
+                          </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                          <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                          <input type="checkbox" name="update_role" value="1" class="custom-control-input" id="update-role">
+                          <label class="custom-control-label" for="update-role">Update Role</label>
+                          </div>
+                          </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                          <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                          <input type="checkbox" name="delete_role" value="1" class="custom-control-input" id="delete-role">
+                          <label class="custom-control-label" for="delete-role">Delete Role</label>
+                          </div>
+                          </div>
+                      </div>
+                      <small>If the User is not given read permission, the user cannot update or delete.</small>
+                      </div>
+                      </div>
+                      
+                      </div>
+                    
+                    
+                  </div>
+                  <div class="col-12 d-flex justify-content-end align-items-center">
+                    <button class="btn btn-outline-success" type="submit">Create Role</button>
+                 </div>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <%- include("../partials/_footer") %> 
+
+
+  <script>
+    let readUser = document.querySelector("#read-user");
+    let createUser = document.querySelector("#create-user");
+    let updateUser = document.querySelector("#update-user");
+    let deleteUser = document.querySelector("#delete-user");
+
+    readUser.addEventListener('change', function (){
+      if(!this.checked){
+        updateUser.checked = false;
+        deleteUser.checked = false;
+      }
+    } )
+
+    updateUser.addEventListener('change', function (){
+      if (this.checked){
+        readUser.checked = true;
+      }
+    })
+
+    deleteUser.addEventListener('change', function (){
+      if (this.checked){
+        readUser.checked = true;
+      }
+    })
+  </script>
+</body>
+</html>
